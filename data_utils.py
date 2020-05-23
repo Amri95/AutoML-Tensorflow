@@ -62,3 +62,9 @@ def tree_feature_selection(trainX, trainY, testX):
     testX = model.transform(testX)
     print("The input data now has ", trainX.shape[1], " features!\n")
     return trainX, testX
+
+def hyper_space(dataset):
+	if dataset == 'cosmos':
+		return {'layer1': (5, 15), 'layer2': (5, 30), 'layer3': (5, 45), 'learning_rate':(10e-6, 0.1), 'beta':(0, 0.001)}
+	else:
+		{'layer1': (1000, 2000), 'layer2': (2000, 4000), 'layer3': (4000, 6000), 'learning_rate':(10e-6, 0.1), 'beta':(0, 0.001)}
